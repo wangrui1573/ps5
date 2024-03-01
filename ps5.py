@@ -16,6 +16,7 @@ def index():
         json_data = json.dumps(data)
 
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            #修改为你的PS5 IP,Change yo your us5 ip
             s.connect(("192.168.31.237", 9090))
             s.sendall(json_data.encode('utf-8'))
             response = s.recv(1024)
