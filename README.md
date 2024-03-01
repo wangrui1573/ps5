@@ -5,7 +5,7 @@ PS4 Remote PKG Install WebGUI
 
 修改顶部的web服务器地址以复制pkg文件超链接,高版本的chrome浏览器会强制将http转为https造成连接失败，需要关闭
 
-![image](https://user-images.githubusercontent.com/42831156/226539712-61755830-775c-4fe9-87ce-d9a27aeb8ef3.png)
+![image](hhttps://raw.githubusercontent.com/wangrui1573/ps5/main/templates/ps5.png)
 
 ```
  curl --data '{"url":"url"} 'http://<PS5 IP>:9090'
