@@ -17,8 +17,10 @@ PS4 Remote PKG Install WebGUI
 
 使用方法：在nas是运行ps5.py
 
-比如我在群晖上运行：
+0.修改ps5.py文件中的PS5 ip地址，并在NAS中运行它，比如我的命令如下
+```
 nohup /usr/local/bin/python3 /volume3/docker/job/ps5/ps5.py &
+```
 
 1. 使用ngnix或者chfs、webdav之类的将你的PS4文件发布为网页版的文件服务器，填入页面并加载
 2.PS5端运行好etahen1.7B
