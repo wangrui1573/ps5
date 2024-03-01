@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PS5 PKG安装</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        form {
+            width: 30vw;
+            height: 90vh;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type=text],
+        input[type=submit] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            
+        }
+        input[type=text] {
+            height: 10vh;
+       
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            height: 90vh;
+        }
+        #myIframe {
+            width: 70vw;
+            height: 88vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- <iframe id="iframe" src="http://192.168.31.232:81"></iframe> -->
+        <div class="nas">
+            <input type="text" id="iframeUrl" placeholder="请输入pkg nginx网址：）"
+                style="width: 65vw;height: 3vw; padding: 5px; border: 2px solid #ccc; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"
+                value="http://192.168.31.218:8000/install/ps4/" />
+            <button onclick="loadIframe()"
+                style="font-size: 15px; border: 2px solid #ccc; border-radius: 5px; padding: 5px 10px;">加载</button>
+    
+            <br />
+            <iframe id="myIframe" src="http://192.168.31.232"
+                frameborder="0"></iframe>
+        </div>
+    
+        <script type="text/javascript">
+            function loadIframe() {
+                var url = document.getElementById('iframeUrl').value;
+                if (url != "") {
+                    document.getElementById("myIframe").src = url;
+                }
+            }
+        </script>
+
+        <form method="POST">
+            <label for="url">请在下方粘贴PKG URL:</label><br>
+            <input type="text" id="url" name="url"><br>
+            <input type="submit" value="安装">
+        </form>
+    </div>
+</body>
+</html>
